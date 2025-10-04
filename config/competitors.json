@@ -1,0 +1,238 @@
+{
+  "competitors": [
+    {
+      "id": "zomato",
+      "name": "Zomato",
+      "sources": {
+        "rss": [
+          "https://economictimes.indiatimes.com/topic/zomato/rssfeeds/1633675.cms",
+          "https://www.business-standard.com/rss/topic/zomato-104.rss",
+          "https://feeds.feedburner.com/ndtvprofit-latest"
+        ],
+        "websites": [
+          "https://blog.zomato.com",
+          "https://www.business-standard.com/topic/zomato",
+          "https://economictimes.indiatimes.com/topic/zomato"
+        ],
+        "social": {
+          "twitter": "@zomato",
+          "linkedin": "company/zomato",
+          "instagram": "zomato",
+          "facebook": "zomato"
+        }
+      },
+      "priority": "high",
+      "keywords": ["zomato", "food delivery", "restaurant discovery", "deepinder goyal"]
+    },
+    {
+      "id": "swiggy",
+      "name": "Swiggy",
+      "sources": {
+        "rss": [
+          "https://economictimes.indiatimes.com/topic/swiggy/rssfeeds/1633676.cms",
+          "https://www.business-standard.com/rss/topic/swiggy-105.rss",
+          "https://www.livemint.com/rss/companies"
+        ],
+        "websites": [
+          "https://blog.swiggy.com",
+          "https://www.business-standard.com/topic/swiggy",
+          "https://economictimes.indiatimes.com/topic/swiggy"
+        ],
+        "social": {
+          "twitter": "@swiggy_in",
+          "linkedin": "company/swiggy",
+          "instagram": "swiggyindia",
+          "facebook": "swiggy.in"
+        }
+      },
+      "priority": "high",
+      "keywords": ["swiggy", "food delivery", "quick commerce", "sriharsha majety", "instamart"]
+    },
+    {
+      "id": "ubereats",
+      "name": "Uber Eats",
+      "sources": {
+        "rss": [
+          "https://feeds.reuters.com/reuters/companyNews",
+          "https://feeds.bloomberg.com/markets/news.rss",
+          "https://techcrunch.com/tag/uber-eats/feed/"
+        ],
+        "websites": [
+          "https://www.ubereats.com/",
+          "https://www.uber.com/newsroom/",
+          "https://www.uber.com/blog/",
+          "https://techcrunch.com/tag/uber-eats/",
+          "https://www.reuters.com/companies/UBER.N"
+        ],
+        "social": {
+          "twitter": "@ubereats",
+          "linkedin": "company/uber",
+          "instagram": "ubereats"
+        }
+      },
+      "priority": "medium",
+      "keywords": ["uber eats", "food delivery", "uber", "gig economy"]
+    },
+    {
+      "id": "doordash",
+      "name": "DoorDash",
+      "sources": {
+        "rss": [
+          "https://feeds.reuters.com/reuters/companyNews",
+          "https://techcrunch.com/tag/doordash/feed/",
+          "https://feeds.bloomberg.com/technology/news.rss"
+        ],
+        "websites": [
+          "https://www.doordash.com/",
+          "https://blog.doordash.com/",
+          "https://ir.doordash.com/",
+          "https://techcrunch.com/tag/doordash/",
+          "https://www.reuters.com/companies/DASH.N"
+        ],
+        "social": {
+          "twitter": "@doordash",
+          "linkedin": "company/doordash",
+          "instagram": "doordash"
+        }
+      },
+      "priority": "medium",
+      "keywords": ["doordash", "food delivery", "tony xu", "dasher"]
+    },
+    {
+      "id": "foodpanda",
+      "name": "foodpanda",
+      "sources": {
+        "rss": [
+          "https://techcrunch.com/tag/food-delivery/feed/",
+          "https://feeds.reuters.com/reuters/technologyNews"
+        ],
+        "websites": [
+          "https://www.foodpanda.com/",
+          "https://www.foodpanda.com/contents/press-releases",
+          "https://corporate.foodpanda.com/"
+        ],
+        "social": {
+          "twitter": "@foodpanda",
+          "linkedin": "company/foodpanda",
+          "instagram": "foodpanda"
+        }
+      },
+      "priority": "low",
+      "keywords": ["foodpanda", "food delivery", "delivery hero"]
+    },
+    {
+      "id": "grubhub",
+      "name": "Grubhub",
+      "sources": {
+        "rss": [
+          "https://techcrunch.com/tag/food-delivery/feed/",
+          "https://feeds.reuters.com/reuters/technologyNews"
+        ],
+        "websites": [
+          "https://www.grubhub.com/",
+          "https://about.grubhub.com/news/",
+          "https://investors.grubhub.com/"
+        ],
+        "social": {
+          "twitter": "@grubhub",
+          "linkedin": "company/grubhub",
+          "instagram": "grubhub"
+        }
+      },
+      "priority": "low",
+      "keywords": ["grubhub", "food delivery", "just eat takeaway"]
+    }
+  ],
+  "monitoring": {
+    "schedule": "daily",
+    "maxArticlesPerSource": 15,
+    "maxWebsitesPerCompetitor": 3,
+    "lookbackDays": 14,
+    "rssFrequency": "0 8,14,20 * * *",
+    "websiteFrequency": "0 */4 * * *",
+    "digestFrequency": "0 9,18 * * *",
+    "socialFrequency": "0 */2 * * *",
+    "keywordFilters": [
+      "food delivery",
+      "restaurant",
+      "quick commerce",
+      "grocery delivery",
+      "IPO",
+      "funding",
+      "acquisition",
+      "partnership",
+      "expansion",
+      "new market",
+      "revenue",
+      "earnings",
+      "valuation"
+    ],
+    "excludeKeywords": [
+      "spam",
+      "advertisement",
+      "promotional"
+    ]
+  },
+  "delivery": {
+    "email": {
+      "enabled": true,
+      "recipients": ["team@yourcompany.com"],
+      "subject": "Food Industry Intelligence Digest - {date}",
+      "sendEmptyDigests": false,
+      "template": "food_industry",
+      "priority": {
+        "high": "immediate",
+        "medium": "daily",
+        "low": "weekly"
+      }
+    },
+    "slack": {
+      "enabled": true,
+      "webhook": "",
+      "channel": "#food-industry-intel",
+      "mentionOnHighPriority": true,
+      "threadReplies": true
+    },
+    "webhook": {
+      "enabled": false,
+      "url": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer YOUR_TOKEN"
+      }
+    }
+  },
+  "analytics": {
+    "trackSentiment": true,
+    "trackMentions": true,
+    "generateTrends": true,
+    "competitorComparison": true,
+    "alertThresholds": {
+      "mentionSpike": 50,
+      "sentimentDrop": -0.3,
+      "newsVolume": 20
+    }
+  },
+  "categories": {
+    "funding": ["funding", "investment", "series", "IPO", "valuation"],
+    "expansion": ["expansion", "new market", "launch", "partnership"],
+    "product": ["new feature", "product launch", "innovation", "technology"],
+    "financial": ["revenue", "earnings", "profit", "loss", "quarterly"],
+    "leadership": ["CEO", "founder", "executive", "appointment", "resignation"],
+    "regulatory": ["regulation", "compliance", "legal", "policy", "government"]
+  },
+  "globalFeeds": {
+    "industryNews": [
+      "https://feeds.feedburner.com/RestaurantBusinessMagazine",
+      "https://www.qsrmagazine.com/rss.xml",
+      "https://feeds.feedburner.com/NationRestaurantNews",
+      "https://techcrunch.com/tag/food-tech/feed/",
+      "https://feeds.reuters.com/reuters/businessNews"
+    ],
+    "financialNews": [
+      "https://feeds.bloomberg.com/markets/news.rss",
+      "https://feeds.reuters.com/reuters/companyNews",
+      "https://feeds.feedburner.com/venturebeat/SZYF"
+    ]
+  }
+}
